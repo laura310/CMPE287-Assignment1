@@ -12,11 +12,11 @@ public class NumberTest {
 		
 		checkPalindrome test2 = new checkPalindrome("12345");
 		boolean result2 = test2.isPalindrome();
-		assertEquals(false, result2);
+		assertFalse(result2);
 		
 		checkPalindrome test3 = new checkPalindrome("ab3443ba");
 		boolean result3 = test3.isPalindrome();
-		assertEquals(true, result3);
+		assertTrue(result3);
 	}
 
 }

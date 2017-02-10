@@ -6,11 +6,17 @@ public class checkPalindrome {
 	/*
 	 * constructor
 	 */
+	checkPalindrome() {
+		this.string = null;
+	}
 	checkPalindrome(String string) {
 		this.string = string;
 	}
 	
 	public boolean isPalindrome() {
+		if(string == null)
+			return false;
+		
 		string = string.trim().replaceAll("\\s", "");
 		int i = 0, j = string.length() - 1;
 		
@@ -34,6 +40,7 @@ public class checkPalindrome {
 			j--;
 		}
 		
+		if(string.length() == 0 || string == null)				return true;
 		if(!Character.isLetterOrDigit(string.charAt(i)))		return false;
 		return true;
 	}
